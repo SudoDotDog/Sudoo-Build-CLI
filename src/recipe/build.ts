@@ -4,12 +4,25 @@
  * @description Build
  */
 
-import { ExecuteOption } from "../declare";
+import { ExecuteOption, ProjectType } from "../declare";
 import { logInfo } from "../util/log";
-import { buildTSConfigPath, tscCommandPath } from "../util/path";
+import { buildTSConfigPath, buildTSReactConfigPath, tscCommandPath } from "../util/path";
 import { spawnCommand } from "../util/spawn";
 
-export const buildRecipe = async (_option: ExecuteOption): Promise<void> => {
+const getConfigPath = (type: ProjectType): string => {
+
+    switch (type) {
+        case 'typescript':
+            return buildTSConfigPath;
+        case 'typescript-react':
+            return buildTSReactConfigPath;
+        case 'typescript-react-native':
+            return buildTSReactConfigPath;
+        default:
+            return buildTSConfigPath;
+    }
+};
+export const buildRecipe = async (option: ExecuteOption): Promise<void> => {
 
     logInfo("Starting Build");
 
@@ -17,7 +30,7 @@ export const buildRecipe = async (_option: ExecuteOption): Promise<void> => {
     try {
         await spawnCommand(tscCommandPath, [
             '--p',
-            buildTSConfigPath,
+            getConfigPath(option.type),
         ]);
     } catch (reason) {
         throw reason;

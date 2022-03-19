@@ -18,8 +18,8 @@ export const tsNodeCommandPath: string = Path.join(currentPath, 'node_modules', 
 export const eslintCommandPath: string = Path.join(currentPath, 'node_modules', '.bin', 'eslint');
 export const nycCommandPath: string = Path.join(currentPath, 'node_modules', '.bin', 'nyc');
 
-export const buildTSConfigPath: string = Path.join(currentPath, 'typescript', 'tsconfig.build.json');
-export const devTSConfigPath: string = Path.join(currentPath, 'typescript', 'tsconfig.dev.json');
+export const buildTSConfigPath: string = Path.join(currentPath, 'node_modules', '@sudoo', 'tsconfig', 'typescript', 'tsconfig.build.json');
+export const buildTSReactConfigPath: string = Path.join(currentPath, 'node_modules', '@sudoo', 'tsconfig', 'react', 'tsconfig.build.json');
 
 export const eslintConfigPath: string = Path.join(currentPath, 'typescript', '.eslintrc.json');
 
