@@ -1,7 +1,11 @@
 {
   "name": "@sudoo/build-cli",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "Build CLI for Sudoo Packages",
+  "bin": {
+    "sudoo-build": "cli",
+    "sdb": "cli"
+  },
   "directories": {
     "doc": "docs"
   },
@@ -16,11 +20,10 @@
   },
   "homepage": "https://github.com/SudoDotDog/Sudoo-Build-CLI#readme",
   "dependencies": {
-    "@sudoo/coco": "^1.8.5"
+    "@sudoo/build-utils": "^1.0.0",
+    "@sudoo/license": "^2.1.0"
   },
   "devDependencies": {
-    "@sudoo/build-utils": "^1.0.0",
-    "@sudoo/license": "^1.1.0",
     "@sudoo/triforce": "^3.0.0"
   },
   "nyc": {

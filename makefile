@@ -12,6 +12,7 @@ nyc := node_modules/.bin/nyc
 
 # Build functions
 build_utils := node_modules/.bin/build-utils
+license_package := node_modules/.bin/license-package
 
 main: dev
 
