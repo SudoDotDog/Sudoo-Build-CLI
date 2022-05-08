@@ -24,7 +24,7 @@
     "@sudoo/license": "^2.1.0"
   },
   "devDependencies": {
-    "@sudoo/triforce": "^3.4.0"
+    "@sudoo/triforce": "^3.5.1"
   },
   "nyc": {
     "extension": [
