@@ -32,6 +32,8 @@ export const execute = async (args: string[]): Promise<void> => {
         return;
     }
 
+    let commandMatched: boolean = false;
+
     for (let i = 0; i < commands.length; i++) {
 
         const command: string = commands[i];
@@ -75,58 +77,72 @@ export const execute = async (args: string[]): Promise<void> => {
 
             switch (command) {
                 case 'build': {
+                    commandMatched = true;
                     await buildRecipe(options);
                     break;
                 }
                 case 'clean': {
+                    commandMatched = true;
                     await cleanRecipe(options);
                     break;
                 }
                 case 'install': {
+                    commandMatched = true;
                     await installRecipe(options);
                     break;
                 }
                 case 'install-prod': {
+                    commandMatched = true;
                     await installProdRecipe(options);
                     break;
                 }
                 case 'outdated': {
+                    commandMatched = true;
                     await outdatedRecipe(options);
                     break;
                 }
                 case 'license': {
+                    commandMatched = true;
                     await licenseRecipe(options);
                     break;
                 }
                 case 'lint': {
+                    commandMatched = true;
                     await lintRecipe(options);
                     break;
                 }
                 case 'lint-fix': {
+                    commandMatched = true;
                     await lintFixRecipe(options);
                     break;
                 }
                 case 'publish': {
+                    commandMatched = true;
                     await publishRecipe(options);
                     break;
                 }
                 case 'publish-dry-run': {
+                    commandMatched = true;
                     await publishDryRunRecipe(options);
                     break;
                 }
                 case 'storybook': {
+                    commandMatched = true;
                     await storybookDevelopmentRecipe(options);
                     break;
                 }
                 case 'build-storybook': {
+                    commandMatched = true;
                     await buildStorybookRecipe(options);
                     break;
                 }
                 case 'test': {
+                    commandMatched = true;
                     await testRecipe(options);
                     break;
                 }
                 case 'coverage': {
+                    commandMatched = true;
                     await coverageRecipe(options);
                     break;
                 }
