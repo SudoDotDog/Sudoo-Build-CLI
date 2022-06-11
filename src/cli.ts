@@ -29,6 +29,7 @@ export const execute = async (args: string[]): Promise<void> => {
     if (commands.length === 0) {
 
         console.log('[COMPLETE] No command specified');
+        console.log('[COMPLETE] Finished');
         return;
     }
 
@@ -152,6 +153,7 @@ export const execute = async (args: string[]): Promise<void> => {
             }
         } catch (reason) {
 
+            console.log(`[ERROR] ${reason}`);
             console.log('[ERROR]');
         }
     }
