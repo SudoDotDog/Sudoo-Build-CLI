@@ -131,7 +131,7 @@ export const execute = async (args: string[]): Promise<void> => {
                     break;
                 }
                 default: {
-                    throw new Error(`Unregcongized Command ${command}`);
+                    throw new Error(`Unrecognized Command ${command}`);
                 }
             }
         } catch (reason) {
