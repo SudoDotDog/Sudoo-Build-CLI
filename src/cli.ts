@@ -153,8 +153,9 @@ export const execute = async (args: string[]): Promise<void> => {
             }
         } catch (reason) {
 
-            console.log(`[ERROR] ${reason}`);
+            console.log(`[ERROR] ${reason as any as string}`);
             console.log('[ERROR]');
+            return;
         }
     }
 
