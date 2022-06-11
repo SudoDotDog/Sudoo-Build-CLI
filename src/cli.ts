@@ -130,6 +130,9 @@ export const execute = async (args: string[]): Promise<void> => {
                     await coverageRecipe(options);
                     break;
                 }
+                default: {
+                    throw new Error(`Unregcongized Command ${command}`);
+                }
             }
         } catch (reason) {
 
