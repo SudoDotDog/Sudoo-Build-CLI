@@ -156,5 +156,9 @@ export const execute = async (args: string[]): Promise<void> => {
         }
     }
 
+    if (!commandMatched) {
+        console.log('[INFO] No recipe specified');
+    }
+
     console.log('[COMPLETE] Finished');
 };
