@@ -153,9 +153,11 @@ export const execute = async (args: string[]): Promise<void> => {
             }
         } catch (reason) {
 
-            console.log(`[ERROR] ${reason as any as string}`);
+            const ERROR_EXIT_CODE: number = 1;
+
+            console.log(reason);
             console.log('[ERROR]');
-            return;
+            process.exit(ERROR_EXIT_CODE);
         }
     }
 
