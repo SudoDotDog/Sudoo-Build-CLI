@@ -19,12 +19,15 @@
     "url": "https://github.com/SudoDotDog/Sudoo-Build-CLI/issues"
   },
   "homepage": "https://github.com/SudoDotDog/Sudoo-Build-CLI#readme",
+  "peerDependencies": {
+    "@sudoo/triforce": "*"
+  },
   "dependencies": {
     "@sudoo/build-utils": "^1.0.0",
     "@sudoo/license": "^2.1.0"
   },
   "devDependencies": {
-    "@sudoo/triforce": "^3.7.0"
+    "@sudoo/triforce": "^3.8.0"
   },
   "nyc": {
     "extension": [
