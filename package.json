@@ -23,8 +23,8 @@
     "@sudoo/triforce": "*"
   },
   "dependencies": {
-    "@sudoo/build-utils": "^1.0.0",
-    "@sudoo/license": "^2.1.0"
+    "@sudoo/build-utils": "1.0.0",
+    "@sudoo/license": "2.1.0"
   },
   "devDependencies": {
     "@sudoo/triforce": "^3.8.0"
