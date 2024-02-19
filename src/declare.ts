@@ -13,5 +13,6 @@ export type ExecuteOption = {
 
     type: ProjectType;
     only: boolean;
+    rawExecutable?: boolean;
     port?: number;
 };

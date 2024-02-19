@@ -69,7 +69,12 @@ export const execute = async (args: string[]): Promise<void> => {
                     }
                     break;
                 }
+                case '--raw-executable': {
 
+                    logInfo(`OPTION - Raw Executable`);
+                    options.rawExecutable = true;
+                    break;
+                }
             }
             continue;
         }

@@ -26,6 +26,7 @@ export const licenseRecipe = async (option: ExecuteOption): Promise<void> => {
 
             main: 'index.js',
 
+            rawExecutable: option.rawExecutable ?? false,
             dependencies: false,
             peerDependencies: false,
             optionalDependencies: false,
